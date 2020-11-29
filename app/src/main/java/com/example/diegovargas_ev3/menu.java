@@ -22,7 +22,7 @@ public class menu extends AppCompatActivity {
 
     public void listado(View v)
     {
-        Intent i = new Intent(this, listado_clientes.class);
+        Intent i = new Intent(this, promociones.class);
         startActivity(i);
     }
 }
