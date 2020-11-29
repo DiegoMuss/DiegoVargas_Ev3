@@ -8,6 +8,7 @@ import android.widget.EditText;
 import android.widget.MediaController;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -40,39 +41,25 @@ public class promociones extends AppCompatActivity {
 
     public void calcular (View view)
     {
-        String cliente = spinner.getSelectedItem().toString();
-        String promo = Promocion.getText().toString();
-        int envio = Integer.parseInt(Envio.getText().toString());
-        int resultado;
-
         Promociones promociones = new Promociones();
 
-        if(promo.toLowerCase().equals("pizzas promo"))
-        {
-            resultado = promociones.getPizzaPromo() + envio;
-            text1.setText("Estimado "+ cliente +", el valor final segun promocion y envio es:");
-            text2.setText("$"+resultado);
-        }
-        else if(promo.toLowerCase().equals("master promo"))
-        {
-            resultado = promociones.getMasterPizza() + envio;
-            text1.setText("Estimado "+ cliente +", el valor final segun promocion y envio es:");
-            text2.setText("$"+resultado);
-        }
-        else if(promo.toLowerCase().equals("pizza max"))
-        {
-            resultado = promociones.getPizzaMax() + envio;
-            text1.setText("Estimado "+ cliente +", el valor final segun promocion y envio es:");
-            text2.setText("$"+resultado);
-        }
+        String cliente = spinner.getSelectedItem().toString();
 
-        /*if(!Promocion.equals("") & Envio.equals(""))
-        {
-            String promo = Promocion.getText().toString();
-            int envio = Integer.parseInt(Envio.getText().toString());
-            int resultado;
+        String promo = Promocion.getText().toString();
+        promo = promo.toLowerCase();
 
-            if(promo.toLowerCase().equals("pizzas promo"))
+        String valor = Envio.getText().toString();
+        int resultado;
+
+        if(promo.isEmpty() || valor.isEmpty())
+        {
+            Toast.makeText(getBaseContext(), "Los campos no pueden quedar vacios", Toast.LENGTH_LONG).show();
+        }
+        else
+        {
+            int envio = Integer.parseInt(valor);
+
+            if(promo.toLowerCase().equals("pizza promo"))
             {
                 resultado = promociones.getPizzaPromo() + envio;
                 text1.setText("Estimado "+ cliente +", el valor final segun promocion y envio es:");
@@ -90,10 +77,10 @@ public class promociones extends AppCompatActivity {
                 text1.setText("Estimado "+ cliente +", el valor final segun promocion y envio es:");
                 text2.setText("$"+resultado);
             }
+            else
+            {
+                Toast.makeText(getBaseContext(), "Debe ingresar una promocion valida", Toast.LENGTH_LONG).show();
+            }
         }
-        else
-        {
-            text1.setText("Debe ingresar un datos validos");
-        }*/
     }
 }
