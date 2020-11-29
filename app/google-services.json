@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1016896543748",
+    "firebase_url": "https://eval3-af6fc.firebaseio.com",
+    "project_id": "eval3-af6fc",
+    "storage_bucket": "eval3-af6fc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1016896543748:android:29417560a986ad0b8c2951",
+        "android_client_info": {
+          "package_name": "com.example.diegovargas_ev3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1016896543748-2c888ung5ist0clbl8sse9ue3v8hr208.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZtWDaKSzuuUE-EEX-vhCzP8X489LV9IE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1016896543748-2c888ung5ist0clbl8sse9ue3v8hr208.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
