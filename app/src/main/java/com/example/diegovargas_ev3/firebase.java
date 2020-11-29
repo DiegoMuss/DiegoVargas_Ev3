@@ -14,6 +14,7 @@ import android.widget.Toast;
 import java.util.UUID;
 
 import Clases.Clientes;
+import Clases.Promociones;
 
 public class firebase extends AppCompatActivity {
 
@@ -38,7 +39,16 @@ public class firebase extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                if(!Nombre.equals("") & Destino.equals("") & Promocion.equals("")){
+                String nombre = Nombre.getText().toString();
+                String destino = Destino.getText().toString();
+                String promocion = Promocion.getText().toString();
+
+                if(nombre.isEmpty() || destino.isEmpty() || promocion.isEmpty())
+                {
+                    Toast.makeText(getBaseContext(), "Por favor rellene todos los campos", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
                     Clientes c = new Clientes();
                     c.setId(UUID.randomUUID().toString());
                     c.setNombre(Nombre.getText().toString());
@@ -52,10 +62,6 @@ public class firebase extends AppCompatActivity {
                     Nombre.setText("");
                     Destino.setText("");
                     Promocion.setText("");
-                }
-                else
-                {
-                    Toast.makeText(getBaseContext(), "No se ha guardado correctamente, por favor rellene los campos correctamente", Toast.LENGTH_LONG).show();
                 }
             }
         });
