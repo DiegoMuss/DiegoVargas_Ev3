@@ -23,14 +23,14 @@
 
             <LinearLayout
                 android:id="@+id/linearLayout2"
-                android:layout_width="375dp"
+                android:layout_width="340dp"
                 android:layout_height="139dp"
                 android:orientation="vertical"
                 tools:layout_editor_absoluteX="1dp"
                 tools:layout_editor_absoluteY="1dp">
 
                 <Spinner
-                    android:id="@+id/spinner2"
+                    android:id="@+id/spin"
                     android:layout_width="match_parent"
                     android:layout_height="44dp" />
 
@@ -48,7 +48,8 @@
                     android:layout_height="wrap_content"
                     android:ems="10"
                     android:hint="Ingrese Valor Envio"
-                    android:inputType="textPersonName" />
+                    android:inputType="number" />
+
             </LinearLayout>
 
             <Button
@@ -56,6 +57,7 @@
                 android:layout_width="288dp"
                 android:layout_height="47dp"
                 android:background="#FF9800"
+                android:onClick="calcular"
                 android:text="Calcular Promocion"
                 android:textColor="#FFFFFF"
                 android:textSize="18dp"
@@ -80,7 +82,7 @@
             android:layout_height="129dp">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/tv1"
                 android:layout_width="317dp"
                 android:layout_height="34dp"
                 android:layout_marginTop="16dp"
@@ -89,11 +91,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/tv2"
                 android:layout_width="136dp"
                 android:layout_height="45dp"
                 android:layout_marginBottom="16dp"
-                android:text="TextView"
                 android:textSize="18dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

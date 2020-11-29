@@ -22,7 +22,7 @@
             android:layout_height="214dp">
 
             <VideoView
-                android:id="@+id/videoView2"
+                android:id="@+id/videov"
                 android:layout_width="324dp"
                 android:layout_height="150dp"
                 app:layout_constraintBottom_toBottomOf="parent"
